@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context=".frag.FirstFragment">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Serviços"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/imagewp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="center"
+                                android:layout_marginBottom="10dp"
+                                tools:src="@tools:sample/avatars" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="8dp"
+                                    android:orientation="vertical">
+                                
+                            <Button
+                                android:id="@+id/buttonwprelold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Restart" />
+
+                            <Button
+                                android:id="@+id/buttonwpstop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/red"
+                                android:text="Stop" />
+                                    
+                                </LinearLayout>
+                            
+                        </LinearLayout>
+                            
+                            <TextView
+                                android:id="@+id/textwp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="whatsapp"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/memowp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Memória"
+                                android:textSize="12sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                          <!--  <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/nuvem1"
+                                android:layout_width="100dp"
+                                android:layout_height="80dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:padding="3dp"
+                                android:scaleType="centerCrop"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="raw/progress.json"
+                                app:lottie_loop="true" /> -->
+
+                            <lecho.lib.hellocharts.view.PieChartView
+                                android:id="@+id/chartwp"
+                                android:layout_width="210dp"
+                                android:layout_height="150dp"
+                                />
+
+                            
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/imageit"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="center"
+                                android:layout_marginBottom="10dp"
+                                tools:src="@tools:sample/avatars" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/buttonitrelold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Restart" />
+
+                                <Button
+                                    android:id="@+id/buttonitstop"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/red"
+                                    android:text="Stop" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="whatsapp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/memoit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Memória"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                        <!--  <com.airbnb.lottie.LottieAnimationView
+                              android:id="@+id/nuvem1"
+                              android:layout_width="100dp"
+                              android:layout_height="80dp"
+                              android:layout_marginTop="5dp"
+                              android:layout_marginBottom="5dp"
+                              android:padding="3dp"
+                              android:scaleType="centerCrop"
+                              app:lottie_autoPlay="true"
+                              app:lottie_fileName="raw/progress.json"
+                              app:lottie_loop="true" /> -->
+
+                        <lecho.lib.hellocharts.view.PieChartView
+                            android:id="@+id/chartit"
+                            android:layout_width="210dp"
+                            android:layout_height="150dp"
+                            />
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/imagefb"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="center"
+                                android:layout_marginBottom="10dp"
+                                tools:src="@tools:sample/avatars" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/buttonfbrelold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Restart" />
+
+                                <Button
+                                    android:id="@+id/buttonfbstop"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/red"
+                                    android:text="Stop" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textfb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="whatsapp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/memofb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Memória"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                        <!--  <com.airbnb.lottie.LottieAnimationView
+                              android:id="@+id/nuvem1"
+                              android:layout_width="100dp"
+                              android:layout_height="80dp"
+                              android:layout_marginTop="5dp"
+                              android:layout_marginBottom="5dp"
+                              android:padding="3dp"
+                              android:scaleType="centerCrop"
+                              app:lottie_autoPlay="true"
+                              app:lottie_fileName="raw/progress.json"
+                              app:lottie_loop="true" /> -->
+
+                        <lecho.lib.hellocharts.view.PieChartView
+                            android:id="@+id/chartfb"
+                            android:layout_width="210dp"
+                            android:layout_height="150dp"
+                            />
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/imagetl"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="center"
+                                android:layout_marginBottom="10dp"
+                                tools:src="@tools:sample/avatars" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/buttontlrelold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Restart" />
+
+                                <Button
+                                    android:id="@+id/buttontlstop"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/red"
+                                    android:text="Stop" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/texttl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="whatsapp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/memotl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Memória"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                        <!--  <com.airbnb.lottie.LottieAnimationView
+                              android:id="@+id/nuvem1"
+                              android:layout_width="100dp"
+                              android:layout_height="80dp"
+                              android:layout_marginTop="5dp"
+                              android:layout_marginBottom="5dp"
+                              android:padding="3dp"
+                              android:scaleType="centerCrop"
+                              app:lottie_autoPlay="true"
+                              app:lottie_fileName="raw/progress.json"
+                              app:lottie_loop="true" /> -->
+
+                        <lecho.lib.hellocharts.view.PieChartView
+                            android:id="@+id/charttl"
+                            android:layout_width="210dp"
+                            android:layout_height="150dp"
+                            />
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+<!--
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                tools:src="@tools:sample/avatars" />
+
+                            <TextView
+                                android:id="@+id/textit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Instagram"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:id="@+id/memoit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Memória"
+                                android:textSize="12sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/nuvemit"
+                                android:layout_width="100dp"
+                                android:layout_height="80dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:padding="3dp"
+                                android:scaleType="centerCrop"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="raw/progress.json"
+                                app:lottie_loop="true" />
+                            <Button
+                                android:id="@+id/buttonitrelold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Restart" />
+
+                            <Button
+                                android:id="@+id/buttonitstop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/red"
+                                android:text="stop" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+
+
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imagefb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                tools:src="@tools:sample/avatars" />
+
+                            <TextView
+                                android:id="@+id/textfb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Messenger"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:id="@+id/memofb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Memória"
+                                android:textSize="12sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/nuvemfb"
+                                android:layout_width="100dp"
+                                android:layout_height="80dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:padding="3dp"
+                                android:scaleType="centerCrop"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="raw/progress.json"
+                                app:lottie_loop="true" />
+                            <Button
+                                android:id="@+id/buttonfbrelold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Restart" />
+
+                            <Button
+                                android:id="@+id/buttonfbstop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/red"
+                                android:text="Stop" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imagetl"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                tools:src="@tools:sample/avatars" />
+
+                            <TextView
+                                android:id="@+id/texttl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Telegram"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/memotl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Memória"
+                                android:textSize="12sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/nuvemtl"
+                                android:layout_width="100dp"
+                                android:layout_height="80dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:padding="3dp"
+                                android:scaleType="centerCrop"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="raw/progress.json"
+                                app:lottie_loop="true" />
+                            <Button
+                                android:id="@+id/buttontlrelold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Restart" />
+
+                            <Button
+                                android:id="@+id/buttontlstop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/red"
+                                android:text="stop" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+-->
+
+              
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Console"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/console"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="nome so cliente"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFF"
+        android:layout_margin="16dp"
+        android:id="@+id/sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Spinner
+            android:id="@+id/spinner"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
